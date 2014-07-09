@@ -1,0 +1,17 @@
+{
+    "contents" : "library(XML)\nlibrary(lubridate)\n\n\nu <- \"C:\\\\Users\\\\Hans T\\\\Desktop\\\\dipnet_app_revamp\\\\webcounts.htm\"\nrt_dat <- readHTMLTable(u)[[123]]\ncolnames(rt_dat) <- c(\"Date\", \"Count\", \"Cumulative\", \"Notes\")\nrt_dat$Count <- as.numeric(gsub(\",\", \"\", as.character(rt_dat$Count)))\nrt_dat$Date <- mdy(paste(rt_dat$Date, \"2014\", sep = \"-\"))\nrt_dat <- rt_dat[32:38,]\n#Catch for unit efforet (CFUE) MODEL\nC <- -20.29183\nA <-  3.2209791\nrt_dat$cfue_estimates <- (A * log(rt_dat$Count, exp(1))) + C\nrt_dat$cfue_estimates[rt_dat$cfue_estimates <= 0] <- 0\nrt_dat2 <- rt_dat\nsave(rt_dat2, file = \"C:\\\\Users\\\\Hans T\\\\Desktop\\\\dipnet_app_revamp\\\\rt_dat2.rda\")\nrm(list = ls())\nload(\"C:\\\\Users\\\\Hans T\\\\Desktop\\\\dipnet_app_revamp\\\\rt_dat.rda\")\n\n\n",
+    "created" : 1404866041838.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3621604600",
+    "id" : "7B1A9B12",
+    "lastKnownWriteTime" : 1404875731,
+    "path" : "C:/Users/Hans T/Desktop/dipnet_app_revamp/process real time webcounts.R",
+    "project_path" : "process real time webcounts.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

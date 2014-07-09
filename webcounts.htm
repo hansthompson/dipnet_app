@@ -1,0 +1,3146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script type="text/javascript" src="/cfanc/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="/cfanc/CFIDE/scripts/masks.js"></script>
+
+
+    <title>Fish Counts - Sport Fish - ADF&amp;G, Alaska Department of Fish and Game</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="keywords" content="Alaska Fish Game ADF&G, Alaska, sport fishing, fishing information, run counts, escapement">
+    <meta name="description" content="Sport Fish Escapement Counts, Alaska Dept. of Fish &amp; Game">
+    <meta name="author" content="Hedstrom">
+    <meta name="copyright" content="Copyright &copy; 1998 - 2014 ADF&amp;G. All rights reserved.">
+    <link rel="shortcut icon" href="/favicon.ico"> 
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+
+<!-- Default stylesheets -->
+
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_content_styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_page_shell.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_primary_nav_hover.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_secondary_nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_tabs_basic.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_ie7_and_under.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_ie6.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_footer_soa.css">
+    <link rel="stylesheet" type="text/css" href="/static/_global/css/sty_print.css" media="print">
+
+<!-- Specific stylesheets (versioned) -->
+    <link rel="stylesheet" type="text/css" href="/static-sf/fish_counts/CSS/style.css?v=59.3">
+<meta http-equiv="Last-Modified" content="Wed, 09 Jul 2014 04:31:18 GMT" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<!-- Javascripts -->
+
+    <script type="text/javascript" src="/static/_global/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/_global/js/navmenu.js"></script>
+
+<!-- Specific Javascripts (versioned) -->
+    <script type="text/javascript" src="/static-sf/fish_counts/JS/fishCounts.js?v=11.59"></script>
+
+<!-- Extra Javascripts -->
+  <script type="text/javascript" src="/static/_global/js/ieHover.js"></script>
+  
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12976037-1']);
+    _gaq.push(['_setDomainName', '.adfg.alaska.gov']);
+    _gaq.push(['_trackPageview', '/sf/FishCounts/index.cfm?ADFG=main.displayResults']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+	<script type="text/javascript">
+<!--
+    _CF_checkselectSpeciesYearLocation = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head><!-- End dsp_head_top.cfm -->
+
+<body>
+<div class="mainwrapper">
+  
+    <div id="skip">
+      <a href="#content">Skip to Main Content</a>
+      <a href="#primarynav">Skip to Primary Navigation</a>
+      <a href="#secondarynav">Skip to Secondary Navigation</a> 
+    </div>
+    <div id="maincontainer">
+      <div id="goldnav">
+  <div class="goldbartoprightcorner"></div>
+  <a id="soalink" href="http://alaska.gov/">State of Alaska<span></span></a>
+  <ul>
+    <li><a href="https://myalaska.state.ak.us/home/app">myAlaska</a></li>
+    <li><a href="http://alaska.gov/akdir1.html">My Government</a></li>
+    <li><a href="http://alaska.gov/residentHome.html">Resident</a></li>
+    <li><a href="http://alaska.gov/businessHome.html">Business in Alaska</a></li>
+    <li><a href="http://alaska.gov/visitorHome.html">Visiting Alaska</a></li>
+    <li><a href="http://alaska.gov/employeeHome.html">State Employees</a></li>
+  </ul>
+  <div class="clear"></div>
+</div><!-- End dsp_goldbar.cfm -->
+      <!-- Begin dsp_subpage_banner.cfm --> 
+<div id="headerarea" class="subpage">
+  <div class="headerbackgroundimage"></div>
+  <div class="headerlogoimage"><a href="/index.cfm?ADFG=">Alaska Department of Fish and Game</a></div>
+  <div class="headerbottom"></div>
+  <div id="searcharea">
+    <form action="http://google.state.ak.us/search" method="get" name="gs">
+      <div id="searchBox">
+        <input id="searchtextfield" name="q" title="Search" type="text" value=" ">
+        <input type="image" id="searchbutton" src="/static/_global/css/css_images/subpage_banner/search_btn.png" alt="Search">
+      </div>
+      <div class="clear"></div>
+      <div>
+        
+        <input class="searchradio" id="agency" name="site" value="DFG" checked="checked" type="radio">
+        <label id="agencylabel" for="agency">Fish &amp; Game</label>
+        <input class="searchradio" id="entire" name="site" value="StateWide" type="radio">
+        <label id="statelabel" for="entire">State of Alaska</label>
+        <input value="DFG" name="client" type="hidden">
+        <input value="DFG" name="proxystylesheet" type="hidden">
+        <input value="date:D:L:d1" name="sort" type="hidden">
+        <input value="xml_no_dtd" name="output" type="hidden">
+        <input value="UTF-8" name="ie" type="hidden">
+        <input value="UTF-8" name="oe" type="hidden">
+        
+        <input type="hidden" name="filter" value="0"/>
+      </div>
+    </form>
+  </div>
+  
+</div>
+
+<div id="printheader" style="width: 100%;">
+  <img src="/static/_global/images/adfg_logo_print.jpg" width="65" height="65" style="float: left;" alt="adfg logo">
+  <h1 style="float: left; color: black; margin-top: 20px; margin-left: 15px;">Alaska Department of Fish and Game</h1>
+  <div class="clear"></div>
+  <hr>
+</div><!-- End dsp_subpage_banner.cfm -->
+<!-- Begin Global Navigation in default_layout.cfm -->
+      
+      <a id="primarynav"></a>
+      <div id="navholder">
+        <div id="divNav"> 
+          <ul class="sf-menu sf-navbar">
+          <!-- Begin dsp_primary_nav_home.cfm -->
+<li>
+
+<a href="/index.cfm?ADFG=home.main">Home</a>
+	<ul>
+		<li>
+			<a href="/index.cfm?ADFG=about.main">About Us</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=about.welcome">Commissioner's Welcome</a></li>
+				<li><a href="/index.cfm?ADFG=about.agency">Our Agency</a></li>
+				<li><a href="/index.cfm?ADFG=about.structure">Our Structure &amp; Staff</a></li>
+				<li><a href="/index.cfm?ADFG=about.spotlight">Employee Spotlights</a></li>
+				<li><a href="/index.cfm?ADFG=about.history">Our History</a></li>
+
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=join.main">Join Us</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=join.careers">Careers</a></li>
+				<li><a href="/index.cfm?ADFG=join.internships">Internships</a></li>
+				<li><a href="/index.cfm?ADFG=join.appointments">Appointed Positions</a></li>
+				<li><a href="/index.cfm?ADFG=join.donate">Donate</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=news.main">News &amp; Events</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=newsreleases.main">Regulation Announcements<br>News Releases<br>Emergency Orders</a></li>
+				<li><a href="/index.cfm?ADFG=pressreleases.main">Media/Press Releases</a></li>
+				<li><a href="/index.cfm?ADFG=hottopics.main">Hot Topics &amp; Issues</a></li>
+				<li><a href="/index.cfm?ADFG=boardsactions.main">Board of Fisheries and Game: Actions &amp; Activities</a></li>
+				
+				<li><a href="/index.cfm?ADFG=articles.main">ADF&amp;G in the News</a></li>
+				<li><a href="/index.cfm?ADFG=wildlifenews.main">Alaska Fish and Wildlife News (Magazine)</a></li>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=research.main">Management &amp; Research</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishresearch.main">Fish &amp; Shellfish</a></li>
+				<li><a href="/index.cfm?ADFG=wildliferesearch.main">Wildlife</a></li>
+				<li><a href="/index.cfm?ADFG=research.habitat">Habitat &amp; Lands</a></li>
+				<li><a href="/index.cfm?ADFG=subsistenceresearch.main">Subsistence</a></li>
+				<li><a href="/index.cfm?ADFG=managementprograms.main">ADF&amp;G Programs</a></li>
+				<li><a href="/index.cfm?ADFG=research.publications">Publications &amp; Reports</a></li>
+				<li><a href="/index.cfm?ADFG=plans.main">Plans</a></li>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=license.main">Licenses &amp; Permits</a>
+			<ul class="thirdlevel">
+				<li><a href="https://www.adfg.alaska.gov/index.cfm?adfg=license.fgstore">Buy a License Online</a></li>
+				<li><a href="/index.cfm?ADFG=sportlicense.main">Sport Fishing</a></li>
+				<li><a href="/index.cfm?ADFG=fishlicense.main">Commercial Fishing</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.main">Hunting &amp; Trapping</a></li>
+				<li><a href="/index.cfm?ADFG=uselicense.main">Habitat Permits</a></li>
+				<li><a href="/index.cfm?ADFG=residentfishing.main">Subsistence &amp; Personal Use</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=library.main">e-Library</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=librarypublications.main">Publications</a></li>
+				<li><a href="/index.cfm?ADFG=multimedia.main">Multimedia</a></li>
+				<li><a href="/index.cfm?ADFG=library.maps">Maps</a></li>
+				<li><a href="/index.cfm?ADFG=library.databases">Databases</a></li>
+				<li><a href="/index.cfm?ADFG=libraryarlis.main">Alaska Resources Library and Information Services (ARLIS)</a></li>
+				<li><a href="/index.cfm?ADFG=library.contacts">Library Contacts</a></li>
+			</ul>
+		</li>
+		
+		<li style="margin: auto; float:right; margin-right:6px;">
+			<a href="/index.cfm?ADFG=contacts.main">Contact Us</a>
+			<ul class="thirdlevel" style="position:absolute; margin-left: -130px;">
+				<li><a href="/index.cfm?ADFG=contacts.main">Contact Info by Office Location</a></li>
+				<li><a href="/index.cfm?ADFG=contacts.subject">Contact Info by Topic</a></li>
+				<li><a href="/index.cfm?ADFG=contacts.emailus">E-mail Us</a></li>
+				<li><a href="/index.cfm?ADFG=contacts.employee">Employee Lookup</a></li>
+			</ul>	
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_fishing.cfm -->
+<li class="current">
+	<a href="/index.cfm?ADFG=fishing.main">Fishing</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=license.main">Licenses &amp; Permits</a>
+			<ul class="thirdlevel">
+				<li><a href="https://www.adfg.alaska.gov/index.cfm?adfg=license.fgstore">Buy Now!</a></li>
+				<li><a href="/index.cfm?ADFG=fishlicense.main">Commercial Licenses</a></li>
+				<li><a href="/index.cfm?ADFG=license.general">Sport License Information</a></li>
+				<li><a href="/index.cfm?ADFG=residentfishing.main">Subsistence &amp; Personal Use</a></li>
+				<li><a href="/index.cfm?ADFG=license.main">More >></a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingCommercial.main">Commercial</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=cfnews.main">News Releases &amp; Announcements</a></li>
+				<li><a href="/index.cfm?ADFG=fishingCommercialByFishery.main">Information by Fishery</a></li>
+				<li><a href="/index.cfm?ADFG=fishingCommercialByArea.main">Information by Area</a></li>
+				<li><a href="/index.cfm?ADFG=fishlicense.reporting">Reporting Resources</a></li>
+			</ul>
+		</li> 
+		<li><a href="/index.cfm?ADFG=fishingSport.main">Sport</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishingSportFishingInfo.main">Fishing Information</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportStockingHatcheries.lakesdatabase">Alaska Lake Database</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportByArea.main">Information by Area</a></li>
+				<li><a href="/sf/FishCounts/">Fish Counts</a></li>
+				<li><a href="/index.cfm?ADFG=prolicenses.sportfishguides">Guide and Charter Requirements</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportBoatingAnglerAccess.main">Boating and Angler Access</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportStockingHatcheries.hatcheries">Hatcheries and Stocking</a></li>
+				<li><a href="/index.cfm?ADFG=SportProxyFishing.main">Proxy Fishing</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSport.trophyfishprogram">Trophy Fish Program</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSport.fiveSalmonFamily">Five Salmon Family Challenge</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingSubsistence.main">Subsistence</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishingSubsistenceByArea.main">Information by Area</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.faqs">FAQs</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.main">Alaska Subsistence Priority</a></li>
+				<li><a href="/index.cfm?ADFG=SubsistenceProxyFishing.main">Proxy Fishing</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingPersonalUse.main">Personal Use</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=PersonalUsebyArea.main">Information By Area</a></li>
+				<li><a href="/index.cfm?ADFG=cfnews.main">Announcements and Updates</a></li>
+				<li><a href="/index.cfm?ADFG=fishingPersonalUse.phone">Recorded Phone Numbers</a></li>
+				<li><a href="/index.cfm?ADFG=PersonalUseProxyFishing.main">Proxy Fishing</a></li>
+				<li><a href="/sf/FishCounts/">Fish Counts</a></li>
+				<li><a href="/index.cfm?ADFG=fishregulations.personalUse">Personal Use Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=fishingPersonalUse.phone">Get More Help</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingaquaticfarming.main">Aquatic Farming</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.programinfo">Program Information</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.aquaticfarminfo">Aquatic Farm Information</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.maps">Aquatic Farm Maps</a></li>
+				<li><a href="/index.cfm?ADFG=aquaticfarming.main">Permitting and Reporting</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.mariculturefaq">FAQs</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.aquaticregs">Aquatic Farming Regulations, Statutes &amp; Guidelines</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.shellfishenhance">Shellfish Enhancement</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.mariculturepublications">Publications</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.mariculturelinks">Related Links</a></li>
+				<li><a href="/index.cfm?ADFG=fishingaquaticfarming.mariculturecontacts">Contact Us</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingHatcheries.main">Hatcheries</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishingHatcheriesPlanning.main">Planning</a></li>
+				<li><a href="/index.cfm?ADFG=fishingHatcheriesRegulationsPolicies.main">Regulations and Policies</a></li>
+				<li><a href="/index.cfm?ADFG=hatcheries.main">Permitting</a></li>		
+				<li><a href="/index.cfm?ADFG=fishingHatcheriesFacilities.main">Facilities</a></li>
+				<li><a href="/index.cfm?ADFG=SportStockingHatcheriesSearch.main">Stocking and Release</a></li>
+				<li><a href="/index.cfm?ADFG=fishingHatcheriesOtherInfo.reports">Reports</a></li>
+				<li><a href="/index.cfm?ADFG=fishingHatcheriesResearch.main">Research</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportStockingHatcheries.faq">FAQs</a></li>
+				<li><a href="/index.cfm?ADFG=contacts.hatcheries">Contact</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=fishingResearch.main">Research</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishinggeneconservationlab.main">Gene Conservation Lab</a></li>
+				<li><a href="/index.cfm?ADFG=fishingpathologylab.main">Pathology Lab</a></li>
+				<li><a href="http://mtalab.adfg.alaska.gov/">Mark Tag and Age Lab</a></li>
+				<li><a href="/index.cfm?ADFG=akssf.main">Alaska Sustainable Salmon Fund</a></li>
+				<li><a href="/index.cfm?ADFG=wassip.main">Western Alaska Salmon Stock Identification Program (WASSIP)</a></li>
+				<li><a href="/index.cfm?ADFG=sonar.main">Sonar Programs</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_hunting.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=hunting.main">Hunting</a>
+	<ul>
+		
+		<li><a href="/index.cfm?ADFG=hunting.general">General Information</a>
+			
+		</li>
+		<li><a href="/index.cfm?ADFG=huntlicense.main">Licenses &amp; Permits</a>
+			<ul class="thirdlevel">
+				<li><a href="https://www.adfg.alaska.gov/index.cfm?adfg=license.fgstore">Buy your License</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.main">License Information</a></li>
+				<li><a href="https://secure.wildlife.alaska.gov/index.cfm?fuseaction=interperm.issue_permit_greeting">Online General Season &amp; Registration Permits</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.draw">Drawing Permit Information</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.registration">Registration Permit Information</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.tier">Tier I &amp; II Permit Information</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.general">General Season Permit Information</a></li>
+			</ul>
+		</li>
+		<li><a href="https://secure.wildlife.alaska.gov/index.cfm?adfg=interperm.report_greeting">File Hunt Reports</a>
+			
+		</li>
+		<li><a href="/index.cfm?ADFG=hunting.species">Game Species</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=bisonhunting.main">Bison</a></li>
+				<li><a href="/index.cfm?ADFG=blackbearhunting.main">Black Bear</a></li>
+				<li><a href="/index.cfm?ADFG=brownbearhunting.main">Brown Bear</a></li>
+				<li><a href="/index.cfm?ADFG=caribouhunting.main">Caribou</a></li>
+				<li><a href="/index.cfm?ADFG=sheephunting.main">Dall Sheep</a></li>
+				<li><a href="/index.cfm?ADFG=deerhunting.main">Deer</a></li>
+				<li><a href="/index.cfm?ADFG=elkhunting.main">Elk</a></li>
+				<li><a href="/index.cfm?ADFG=moosehunting.main">Moose</a></li>
+				<li><a href="/index.cfm?ADFG=goathunting.main">Mountain Goat</a></li>
+				<li><a href="/index.cfm?ADFG=muskoxhunting.main">Muskox</a></li>
+				<li><a href="/index.cfm?ADFG=smallgamehunting.main">Small Game</a></li>
+				<li><a href="/index.cfm?ADFG=waterfowlhunting.main">Waterfowl</a></li>
+				<li><a href="/index.cfm?ADFG=wolfhunting.main">Wolf</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=huntingmaps.main">Maps</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=huntingmaps.byspecies">Hunting Maps</a></li>
+				<li><a href="/index.cfm?ADFG=huntingmaps.gmuinfo">Area Information</a></li>
+				<li><a href="/index.cfm?ADFG=huntingmaps.restrictionsbygmu">Areas with Restrictions</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=huntered.ranges">Shooting Ranges</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=anchoragerange.main">Anchorage Range</a></li>
+				<li><a href="/index.cfm?ADFG=fairbanksrange.main">Fairbanks Range</a></li>
+				<li><a href="/index.cfm?ADFG=juneaurange.main">Juneau Range</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=huntered.main">Hunter Education</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=huntered.basichunter">Basic Hunter Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.bowhunter">Bow Hunter Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.muzzleloader">Muzzleloader Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.schedules">Class Schedules</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.clinics">Hunter Clinics</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.bearbaitingsched">Bear Baiting Clinics</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.mobile">Mobile Shooting</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.womens">Women's Programs</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.youth">Youth Programs</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=trapping.main">Trapping</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=trapping.main">General Information</a></li>
+				<li><a href="/index.cfm?ADFG=wcnews.main">Emergency Orders</a></li>
+				<li><a href="/index.cfm?ADFG=wildliferegulations.main">Regulations</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_subsistence.cfm -->
+<li>
+
+<a href="/index.cfm?ADFG=subsistence.main">Subsistence</a>
+	<ul>
+		<li>
+			<a href="/index.cfm?ADFG=divisions.subsoverview">Subsistence Division Overview</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=divisions.subsdirector">Director</a></li>
+				<li><a href="/index.cfm?ADFG=divisions.subsmission">Mission and Core Services</a></li>
+				<li><a href="/index.cfm?ADFG=divisions.subsorg">Organization</a></li>
+				<li><a href="/index.cfm?ADFG=divisions.subsbudget">Budget</a></li>
+				<li><a href="/index.cfm?ADFG=divisions.subsstaff">Staff Listing</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=subsistence.harvest">Subsistence Use Information</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=subsistence.hunting">Subsistence Hunting</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSubsistence.main">Subsistence Fishing</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.federal">Federal Subsistence</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.nonsubsistence">Nonsubsistence Areas</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.faqs">FAQs</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="/index.cfm?ADFG=subsistenceregulations.main">Regulations &amp; Permits</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=subsistenceregulations.main">Overview</a></li>
+				<li><a href="/index.cfm?ADFG=subsistence.customary">Customary and Traditional Use</a></li>
+				<li><a href="/index.cfm?ADFG=subsistenceregulations.finfish">Fishing Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=subsistenceregulations.wildlife">Hunting and Trapping Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=residentfishing.main">Subsistence and Personal Use Fishing Permits</a></li>
+				<li><a href="/index.cfm?ADFG=huntlicense.cultural">Cultural and Subsistence Harvest Permits</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/index.cfm?ADFG=subsistence.harvest">Harvest Data &amp; Reports</a>
+			<ul class="thirdlevel">
+				<li><a href="/sb/CSIS/">CSIS – Community Subsistence Information System</a></li>
+				<li><a href="/sf/publications/">The Technical Papers and Special Publications Series</a></li>
+			</ul>	
+		</li>
+		
+		<li>
+			<a href="/index.cfm?ADFG=cfnews.main">Regulatory Announcements</a>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_viewing.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=viewing.main">Viewing</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=viewinglocations.main">Where to Go</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewinglocations.southcoastal">Alaska Peninsula, Kodiak &amp; Aleutians</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.anchorage">Anchorage / Mat-Su</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.interior">Interior Alaska</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.kenai">Kenai Peninsula</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.sewardpeninsula">Nome Area</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.northern">Northern Alaska</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.pws">Prince William Sound</a></li>
+				<li><a href="/index.cfm?ADFG=southeastviewing.main">Southeast Alaska</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.southwestern">Southwestern Alaska</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.wrangellsteliasglenn">Wrangell-St. Elias Park &amp; Glenn Highway</a></li>
+				<li><a href="/index.cfm?ADFG=viewinglocations.accessible">Accessible Facilities</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.locator">Refuges &amp; Sanctuaries</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=viewing.what">What to See</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=birdviewing.main">Birds</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.landmammals">Land Mammals</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.marinemammals">Marine Mammals</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.fish">Fish</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.tidepooling">Tidepooling</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=viewing.when">When to Go</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewing.seasonal">Wildlife by Season</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.events">Festivals &amp; Events</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=viewing.trailcams">Virtual Viewing</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewing.trailcams">Trailcams</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.webcams">Webcams</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.video">Video</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.podcasts">Audio</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.trackingmaps">Tracking Maps</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=viewing.tips">Tips &amp; Safety</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewing.distance">Signs of Alarm</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.remotetravel">Remote Travel Tips</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.ethics">Viewing Ethics</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.spottingwildlife">Spotting Wildlife</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.binoculars">Using Binoculars</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.photography">Photography</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=viewing.guidebooks">Guides &amp; Checklists</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewing.guidebooks">Guidebooks</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.brochures">Brochures</a></li>
+				<li><a href="/index.cfm?ADFG=viewing.checklists">Checklists</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=citizenscience.main">Citizen Science</a></li>
+		<li><a href="/index.cfm?ADFG=viewingpermits.main">Permits</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=viewingpermits.roundisland">Round Island</a></li>
+				<li><a href="/index.cfm?ADFG=viewingpermits.stanprice">Stan Price / Pack Creek</a></li>
+				<li><a href="/index.cfm?ADFG=viewingpermits.mcneil_overview">McNeil River</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_education.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=education.main">Education</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=educators.main">For Educators</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=educators.teacherresources">Teacher/School-Based Resources</a></li>
+				<li><a href="/index.cfm?ADFG=educators.teachertraining">Teacher Training</a></li>
+				<li><a href="/index.cfm?ADFG=educators.earlychildhood">Early Childhood Resources</a></li>
+				<li><a href="/index.cfm?ADFG=educators.edpermits">Educational Permits</a></li>
+				<li><a href="/index.cfm?ADFG=educators.contacts">Contact an Educator</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=huntered.main">For Hunters</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=huntered.basichunter">Basic Hunter Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.bowhunter">Bow Hunter Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.muzzleloader">Muzzleloader Education</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.schedules">Class Schedules</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.locations">Class Locations</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.clinics">Hunter Clinics</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.bearbaitingsched">Bear Baiting Clinics</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.mobile">Mobile Shooting</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.womens">Women's Programs</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.youth">Youth Programs</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.ranges">State Shooting Ranges</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.volunteering">Volunteer Instructors</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.lostcard">Lost Your Card?</a></li>
+				<li><a href="/index.cfm?ADFG=huntered.contacts">Contact Information</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=anglereducation.main">For Anglers</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=outdooreducation.bow">Becoming an Outdoors-Woman</a></li>
+				<li><a href="/index.cfm?ADFG=anglereducation.rodloaner">Rod Loaner Program</a></li>
+				<li><a href="/index.cfm?ADFG=anglereducation.burbot">How to Set Line for Burbot</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=outdooreducation.main">Camps &amp; Skills Clinics</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=outdooreducation.foryouth">For Kids and Youth</a></li>
+				<li><a href="/index.cfm?ADFG=outdooreducation.forwomen">For Women</a></li>
+				<li><a href="/index.cfm?ADFG=outdooreducation.foreveryone">For Everyone</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=citizenscience.main">Citizen Science</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=citizenscience.bioblitz">Bioblitz</a></li>
+				<li><a href="/index.cfm?ADFG=citizenscience.bats">Bats</a></li>
+				<li><a href="/index.cfm?ADFG=citizenscience.woodfrog">Wood Frogs</a></li>
+				<li><a href="/index.cfm?ADFG=citizenscience.loonsgrebesoverview">Loons &amp; Grebes</a></li>
+				<li><a href="/index.cfm?ADFG=citizenscience.contacts">Contact</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/index.cfm?ADFG=education.calendar">Calendar of Events</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=education.calendar">Upcoming Events</a></li>
+				<li><a href="/index.cfm?ADFG=education.communityevents">Community Events</a></li>
+				<li><a href="/index.cfm?ADFG=education.educatorevents">For Educators</a></li>
+				<li><a href="/index.cfm?ADFG=education.hunterevents">For Hunters</a></li>
+				<li><a href="/index.cfm?ADFG=education.anglerevents">For Anglers</a></li>
+				<li><a href="/index.cfm?ADFG=education.upcomingcamps">Camps &amp; Skills Clinics</a></li>
+			</ul>
+		</li>
+		
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_species.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=species.main">Species</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=animals.main">Animals</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=animals.listall">List All</a></li>
+				<li><a href="/index.cfm?ADFG=animals.listbirds">Birds</a></li>
+				<li><a href="/index.cfm?ADFG=animals.listfish">Fish</a></li>
+				<li><a href="/index.cfm?ADFG=animals.listinvertebrates">Invertebrates</a></li>
+				<li><a href="/index.cfm?ADFG=animals.listmammals">Mammals</a></li>
+				<li><a href="/index.cfm?ADFG=animals.listreptiles">Reptiles &amp; Amphibians</a></li>
+			</ul>
+		</li>
+
+		<li><a href="/index.cfm?ADFG=nonnativespecies.main">Nonnative</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=invasive.main">Invasive Species</a></li>
+				<li><a href="/index.cfm?ADFG=nonnativespecies.introducedoverview">Intentional Introductions</a></li>
+				<li><a href="/index.cfm?ADFG=pets.main">Pets &amp; Livestock</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=specialstatus.main">Special Status</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=specialstatus.akendangered">State Listings</a></li>
+				<li><a href="/index.cfm?ADFG=specialstatus.fedendangered">Federal Listings</a></li>
+				<li><a href="/index.cfm?ADFG=specialstatus.extinct">Extinct Species</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=livewith.main">Living with Wildlife</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=livingwithbears.main">Bears</a></li>
+				<li><a href="/index.cfm?ADFG=livewith.moose">Moose</a></li>
+				<li><a href="/index.cfm?ADFG=livewith.muskoxen">Muskoxen</a></li>
+				<li><a href="/index.cfm?ADFG=livewith.wolves">Wolves</a></li>
+				<li><a href="/index.cfm?ADFG=livingwithbirds.main">Birds</a></li>
+				<li><a href="/index.cfm?ADFG=livingwithbats.main">Bats</a></li>
+				<li><a href="/index.cfm?ADFG=livewith.beavers">Beavers</a></li>
+				<li><a href="/index.cfm?ADFG=distressedwildlife.main">Stranded, Dead or Orphaned</a></li>
+				<li><a href="/index.cfm?ADFG=wildlifelandscaping.main">Landscaping for Wildlife</a></li>
+				<li><a href="/index.cfm?ADFG=livewith.collarsbandstags">Collars, Bands and Tags</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=disease.main">Parasites &amp; Diseases</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=disease.main">Diseases of Concern</a></li>
+				<li><a href="/index.cfm?ADFG=disease.specieslist">Information by Host Species</a></li>
+				<li><a href="/index.cfm?ADFG=disease.diseaselist">List of Diseases and Parasites</a></li>
+				<li><a href="/index.cfm?ADFG=disease.vet">Veterinary Services</a></li>
+				<li><a href="/index.cfm?ADFG=disease.fishlab">Fish &amp; Shellfish Laboratories</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=species.wapabout">Wildlife Action Plan</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=species.wapabout">About the Plan</a></li>
+				<li><a href="/index.cfm?ADFG=species.wapview">View the Final Plan</a></li>
+				<li><a href="/index.cfm?ADFG=species.wapimplementation">Plan Implementation</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_lands.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=lands.main">Lands &amp; Waters</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=access.main">Access</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=access.federal">Federal Lands</a></li>
+				<li><a href="/index.cfm?ADFG=access.state">State Lands</a></li>
+				<li><a href="/index.cfm?ADFG=access.municipal">Borough and Municipal Lands</a></li>
+				<li><a href="/index.cfm?ADFG=access.private">Private Lands</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSportBoatingAnglerAccess.main">Boat Ramps &amp; Angler Access</a></li>
+				<li><a href="/index.cfm?ADFG=fishingSport.region">Stocked Lake Maps</a></li>
+				<li><a href="/index.cfm?ADFG=accessbrochures.main">Access Brochures</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=ecosystems.main">Ecosystems</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=ecosystems.list">The Ecosystems</a></li>
+				<li><a href="/index.cfm?ADFG=ecosystems.resilience">The Changing Landscape</a></li>
+        
+        
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=habitatresearch.main">Habitat Research</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=habitatresearch.terrestrial">Terrestrial</a></li>
+        
+				<li><a href="/index.cfm?ADFG=habitatresearch.marine">Marine/Estuarine</a></li>
+				<li><a href="/index.cfm?ADFG=habitatresearch.other">Other Habitat Research</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=maps.main">Maps &amp; GIS</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=maps.interactive">Interactive Maps</a></li>
+				<li><a href="/index.cfm?ADFG=maps.data">GIS Data Downloads</a></li>
+				<li><a href="/index.cfm?ADFG=maps.printable">Printable Maps</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=habitatoversight.main">Planning &amp; Management</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=habitatoversight.planning">Planning</a></li>
+				<li><a href="/index.cfm?ADFG=habitatoversight.management">Management</a></li>
+				<li><a href="/index.cfm?ADFG=habitatoversight.watersprograms">Waters Programs</a></li>
+				<li><a href="/index.cfm?ADFG=uselicense.main">Habitat Permits</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=conservationareas.main">Conservation Areas</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=conservationareas.locator">Game Refuges</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.locator">Wildlife Sanctuaries</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.locator">Critical Habitat Areas</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.locator">Wildlife Ranges</a></li>
+				<li><a href="/sf/SARR/AWC/">Waters Important to Anadromous Fish</a></li>
+        <li><a href="/index.cfm?ADFG=kbrr.home">Kachemak Bay National Research Reserve</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.marineprotected">Marine Protected Areas</a></li>
+				<li><a href="/index.cfm?ADFG=conservationareas.controlleduse">Controlled Use Areas</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=habitatrestoration.main">Restoration &amp; Enhancement</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=habitatrestoration.stream">Lake and Stream Restoration</a></li>
+				<li><a href="/index.cfm?ADFG=fishpassage.main">Fish Passage Improvement Program</a></li>
+				<li><a href="/index.cfm?ADFG=habitatrestoration.enhancement">Wildlife Habitat Enhancement</a></li>
+				<li><a href="/index.cfm?ADFG=habitatrestoration.landowner">Landowner Assistance</a></li>
+				<li><a href="/index.cfm?ADFG=habitatrestoration.resources">Guides and Resources</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+
+          <!-- Begin dsp_primary_nav_regs.cfm -->
+<li>
+	<a href="/index.cfm?ADFG=regulations.main">Regulations</a>
+	<ul>
+		<li><a href="/index.cfm?ADFG=fishregulations.main">Fishing</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=fishregulations.sport">Sport Fishing Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=fishregulations.commercial">Commercial Fishing Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=fishregulations.personalUse">Personal Use Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=fishregulations.Subsistence">Subsistence Regulations</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=wildliferegulations.main">Wildlife</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=wildliferegulations.hunting">Hunting Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=wildliferegulations.trapping">Trapping Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=wcnews.main">Emergency Orders</a></li>
+				<li><a href="/index.cfm?ADFG=wildliferegulations.predatorcontrol">Predator Control Regulations</a></li>
+				<li><a href="/index.cfm?ADFG=wildliferegulations.misc">Other Regulations</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=subsistenceregulations.main">Subsistence</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=subsistenceregulations.finfish">Finfish Fisheries</a></li>
+				<li><a href="/index.cfm?ADFG=subsistenceregulations.wildlife">Hunting</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=habitatregulations.main">Habitat</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=habitatregulations.special">Special Areas</a></li>
+				<li><a href="/index.cfm?ADFG=habitatregulations.prohibited">Fish Habitat</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=process.main">Boards</a>
+			<ul class="thirdlevel">
+				<li><a href="/index.cfm?ADFG=gameboard.main">Board of Game</a></li>
+				<li><a href="/index.cfm?ADFG=fisheriesboard.main">Board of Fisheries</a></li>
+				<li><a href="/index.cfm?ADFG=process.jointboard">The Joint Board</a></li>
+				<li><a href="/index.cfm?ADFG=process.commissionerauthorities">Commissioner Authority</a></li>
+				<li><a href="/index.cfm?ADFG=process.advisory">Advisory Committees</a></li>
+			</ul>
+		</li>
+		<li><a href="/index.cfm?ADFG=enforcement.main">Enforcement</a>
+		</li>
+	</ul>
+</li>
+
+          </ul>
+          <div style="clear:both;"></div>
+        </div><!-- end divNav -->
+      </div><!-- end navholder-->
+<!-- End Global Navigation in default_layout.cfm -->
+<!-- Begin dsp_content_open.cfm -->
+
+<div id="contentshell">
+ 
+  
+  <div id="contentholder" class="leftandmiddle">
+    <div class="topleft corner"></div><div class="topright corner"></div><div class="bottomleft corner"></div><div class="bottomright corner"></div> 
+    
+      <div id="leftcolumn">
+         
+        <a name="secondarynav" id="secondarynav"></a>
+        <h2>Secondary Site Navigation</h2>  
+        <div class="leftcolumninner">
+          <p class="navtitle">Sport Fishing</p>
+<ul>
+  <li class="beginsub"><a href="/index.cfm?adfg=fishingSport.main">Sport Fish Home</a></li>
+  <li class="beginsub"><a href="/index.cfm?adfg=fishingSportFishingInfo.main">Fishing Information</a>
+    <ul>
+      <li class=""><a href="/index.cfm?adfg=fishingSportFishingInfo.eonr">Emergency Orders and News Releases</a></li>
+      <li class=""><a href="/sf/FishingReports/index.cfm?ADFG=main.home">Fishing Reports by Area</a></li>
+      <li><a href="/index.cfm?adfg=contacts.sfrecorded">Inseason Fishing Hotlines</a></li>
+      <li><a href="/index.cfm?adfg=fishregulations.sport">Sport Fishing Regulations</a></li>
+      <li><a href="/index.cfm?adfg=sportlicense.main">Licenses &amp; Stamps</a></li>
+      <li><a href="/index.cfm?adfg=contacts.main">Area Offices &amp; Contact Information</a></li>
+      <li class="active"><a href="/sf/FishCounts/index.cfm?adfg=main.home">Fish Counts</a></li>
+      <li><a href="/sf/sportfishingsurvey/">Sport Fishing Survey</a></li>
+      <li class=""><a href="/index.cfm?adfg=fishingSportFishingInfo.publications">Publications/Reports</a></li>
+      <li class=""><a href="/index.cfm?adfg=fishingSportFishingInfo.workshops">Workshops/Clinics</a></li>
+      <li class=""><a href="/index.cfm?adfg=fishingSport.region">Lake Fishing Info</a></li>
+      <li class=""><a href="/index.cfm?adfg=fishingSportFishingInforuntiming.main">Run-timing</a></li>
+      <li class=""><a href="/index.cfm?adfg=fishingSportFishingInfo.rockfishconservation">Rockfish Conservation</a></li>
+    </ul>
+  </li>
+  <li class="beginsub"><a href="/index.cfm?adfg=fishingSportStockingHatcheries.lakesdatabase">Alaska Lake Database</a></li>
+  <li class="beginsub"><a href="/index.cfm?adfg=fishingSportByArea.main">Information By Area</a></li>
+  <li class="beginsub"><a href="/index.cfm?adfg=prolicenses.sportfishguides">Guide and Charter Requirements</a></li>
+  <li class="beginsub"><a href="/index.cfm?adfg=fishingSportBoatingAnglerAccess.main">Boating and Angler Access Programs</a></li>
+  <li><a href="/index.cfm?adfg=fishingSportStockingHatcheries.hatcheries">Hatcheries and Stocking</a>
+  <li><a href="/index.cfm?adfg=nonnativespecies.main">Nonnative &amp; Invasive Species</a></li>
+  <li><a href="/index.cfm?adfg=anglereducation.main">Angler Education Opportunities</a></li>
+  <li><a href="/index.cfm?adfg=SportProxyFishing.main">Proxy Fishing</a></li>
+</ul>
+ 
+        </div>
+      </div>
+    
+
+    <div id="maincontentcolumn">
+      <div id="maincontentinner">
+        
+          <div id="breadcrumb">
+            <span class="for_screen_reader">You are here: </span>
+            
+            
+              <a href='/' class='breadcrumb'>ADF&amp;G Home</a>&nbsp;&#187;&nbsp;<a href='/index.cfm?adfg=fishing.main'>Fishing</a>&nbsp;&#187;&nbsp;<a href='/index.cfm?adfg=fishingSport.main'>Sport</a>&nbsp;&#187;&nbsp;<a href='/index.cfm?adfg=fishingSportFishingInfo.main'>Fishing Info</a>&nbsp;&#187;
+<a href="/sf/FishCounts/index.cfm?ADFG=main.home" class="breadcrumb">Fish Counts</a>
+            
+          </div>
+        
+        <a name="content" id="content"></a>
+        
+          
+
+
+
+  <h1 class="temph1" id="title">Fish Count Data Search<br />
+  <span class="h1subheader"></span></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="selectSpeciesYearLocation" id="selectSpeciesYearLocation" action="/sf/FishCounts/index.cfm?ADFG=main.displayResults" method="post" style="background-color: #ddd; padding: 10px; font-size: .9em; height: 7em; border: solid 1px #000;" onsubmit="return _CF_checkselectSpeciesYearLocation(this)">
+  <input style="float: right; margin: 3em 8em 0 0;" type="Submit" name="Submit" value="Submit">
+  <div style="margin-right: 5em; display: block; float: right;">
+    Year:<br>
+    
+    <SELECT NAME="year" size="5" multiple="yes">
+    
+    
+      
+      
+          <option value="2014" SELECTED>2014</option>
+        
+      
+          <option value="2013" SELECTED>2013</option>
+        
+      
+          <option value="2012">2012</option>
+        
+      
+          <option value="2011">2011</option>
+        
+      
+          <option value="2010">2010</option>
+        
+      
+          <option value="2009">2009</option>
+        
+      
+          <option value="2008">2008</option>
+        
+      
+          <option value="2007">2007</option>
+        
+      
+          <option value="2006">2006</option>
+        
+      
+          <option value="2005">2005</option>
+        
+      
+          <option value="2004">2004</option>
+        
+      
+          <option value="2003">2003</option>
+        
+      
+          <option value="2002">2002</option>
+        
+      
+          <option value="2001">2001</option>
+        
+      
+          <option value="2000">2000</option>
+        
+      
+          <option value="1999">1999</option>
+        
+      
+          <option value="1998">1998</option>
+        
+      
+          <option value="1997">1997</option>
+        
+      
+          <option value="1996">1996</option>
+        
+      
+          <option value="1995">1995</option>
+        
+      
+          <option value="1994">1994</option>
+        
+      
+          <option value="1993">1993</option>
+        
+      
+          <option value="1992">1992</option>
+        
+      
+          <option value="1991">1991</option>
+        
+      
+          <option value="1990">1990</option>
+        
+      
+          <option value="1989">1989</option>
+        
+      
+          <option value="1988">1988</option>
+        
+      
+          <option value="1987">1987</option>
+        
+      
+          <option value="1986">1986</option>
+        
+      
+          <option value="1985">1985</option>
+        
+      
+          <option value="1984">1984</option>
+        
+      
+          <option value="1983">1983</option>
+        
+      
+          <option value="1982">1982</option>
+        
+      
+          <option value="1981">1981</option>
+        
+      
+          <option value="1980">1980</option>
+        
+      
+          <option value="1979">1979</option>
+        
+      
+      
+    
+    </SELECT>
+  </div>
+  <div style="margin-left: 2em; display: block; float: left;">
+    Location:<br>
+    
+    <SELECT NAME="countLocationID">
+      
+    
+        
+          <option value="23"> Afognak River (Litnik)</option>
+        
+      
+    
+        
+          <option value="25"> Ayakulik River</option>
+        
+      
+    
+        
+          <option value="33"> Bear River</option>
+        
+      
+    
+        
+          <option value="28"> Buskin River</option>
+        
+      
+    
+        
+          <option value="30"> Chignik River</option>
+        
+      
+    
+        
+          <option value="7"> Coghill River</option>
+        
+      
+    
+        
+          <option value="39"> Copper River (Miles L)</option>
+        
+      
+    
+        
+          <option value="27"> Dog Salmon River</option>
+        
+      
+    
+        
+          <option value="66"> George River</option>
+        
+      
+    
+        
+          <option value="54"> Goodnews River</option>
+        
+      
+    
+        
+          <option value="6"> Gulkana River</option>
+        
+      
+    
+        
+          <option value="35"> Ilnik River</option>
+        
+      
+    
+        
+          <option value="55"> Kanektok River</option>
+        
+      
+    
+        
+          <option value="24"> Karluk River</option>
+        
+      
+    
+        
+          <option value="41"> Kasilof River (sockeye)</option>
+        
+      
+    
+        
+          <option value="40" SELECTED> Kenai River (late-run sockeye)</option>
+          
+        
+      
+    
+        
+          <option value="67"> Kogrukluk River</option>
+        
+      
+    
+        
+          <option value="16"> Little Susitna</option>
+        
+      
+    
+        
+          <option value="32"> Nelson River (Sapsuk)</option>
+        
+      
+    
+        
+          <option value="51"> Nushagak River</option>
+        
+      
+    
+        
+          <option value="26"> Olga Creek (Upper Station)</option>
+        
+      
+    
+        
+          <option value="31"> Orzinski Lake</option>
+        
+      
+    
+        
+          <option value="60"> Pasagshak</option>
+        
+      
+    
+        
+          <option value="22"> Pauls Bay River</option>
+        
+      
+    
+        
+          <option value="68"> Salmon River</option>
+        
+      
+    
+        
+          <option value="29"> Saltery Creek</option>
+        
+      
+    
+        
+          <option value="34"> Sandy River</option>
+        
+      
+    
+        
+          <option value="5"> Situk River</option>
+        
+      
+    
+        
+          <option value="64"> Tatlawiksuk River</option>
+        
+      
+    
+        
+          <option value="69"> Telaquana River</option>
+        
+      
+    
+      
+    </SELECT>
+  </div>
+  <div style="margin-left: 20em; display: block;">
+    Species:<br>
+    
+    <SELECT NAME="SpeciesID">
+      
+      
+        
+      
+          <option value="420" SELECTED>Sockeye</option>
+        
+      
+        
+      
+    </SELECT>
+  </div>
+</form>
+
+<br clear="all" />
+
+
+<p style="float: right; width: 75px;"><a href="/sf/FishCounts/index.cfm?ADFG=main.home">New Search</a></p>
+<div class="NavInfo">Kenai River (late-run sockeye) Sockeye for 2014</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="text-align: left;">
+  <a href="/sf/FishCounts/index.cfm?ADFG=main.displayResults&COUNTLOCATIONID=40&SPECIESID=420&YEAR=2014,2013">Bookmark this page</a>
+</p>
+
+
+
+  <TABLE class="basic" width="100%">
+    <TR>
+      <TD ALIGN="center">
+        
+        <FONT SIZE="-1">
+        Location: <B>Kenai River (late-run sockeye)</B><BR>
+        Species: <strong>Sockeye</strong><br />
+        Method: <B>Sonar</B><BR>
+        </FONT>
+        
+      </TD>
+      <TD>
+        <p style="width: 15em; text-align: center; margin: auto;">The selected years are color-coded in the graphs below:</p>
+        <ul class="YearList">
+        
+        
+          
+          
+            <li style="color: red;">
+          
+            <strong>2014</strong></li>
+          </span>
+          
+        
+          
+          
+            <li style="color: black;">
+          
+            <strong>2013</strong></li>
+          </span>
+          
+        
+        </ul>
+      </TD>
+    </TR>
+    <TR>
+
+      <TD ALIGN="center">
+      
+        <B>Daily Counts</B><BR>
+
+        
+          
+        
+        
+
+
+      <div id="graph">
+        <!-- WebCharts3D v5.1(2077b) -->
+<IMG SRC="/cfanc/CFIDE/GraphData.cfm?graphCache=wc50&graphID=Images/4299545330178975.JPG" id="Images_4299545330178975_JPG" name="Images_4299545330178975_JPG" usemap="#Images_4299545330178975_JPG_map" border="0"/>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAB' id='GP1404865880223AAAB'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/01</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>10,392</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAC' id='GP1404865880223AAAC'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/02</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>9,240</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAD' id='GP1404865880223AAAD'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/03</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>10,794</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAE' id='GP1404865880223AAAE'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/04</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>9,288</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAF' id='GP1404865880223AAAF'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/05</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>11,574</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAG' id='GP1404865880223AAAG'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/06</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>29,490</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAH' id='GP1404865880223AAAH'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/07</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>29,076</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAI' id='GP1404865880223AAAI'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/01</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>7,530</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAJ' id='GP1404865880223AAAJ'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/02</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>4,380</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAK' id='GP1404865880223AAAK'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/03</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>4,164</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAL' id='GP1404865880223AAAL'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/04</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>10,655</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAM' id='GP1404865880223AAAM'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/05</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>11,454</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAN' id='GP1404865880223AAAN'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/06</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>4,915</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAO' id='GP1404865880223AAAO'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/07</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>3,508</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAP' id='GP1404865880223AAAP'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/08</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>3,514</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAQ' id='GP1404865880223AAAQ'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/09</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>6,814</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAR' id='GP1404865880223AAAR'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/10</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>18,270</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAS' id='GP1404865880223AAAS'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/11</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>33,702</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAT' id='GP1404865880223AAAT'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/12</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>10,086</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAU' id='GP1404865880223AAAU'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/13</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>9,090</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAV' id='GP1404865880223AAAV'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/14</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>24,520</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAW' id='GP1404865880223AAAW'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/15</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>93,151</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAX' id='GP1404865880223AAAX'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/16</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>247,084</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAY' id='GP1404865880223AAAY'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/17</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>215,636</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AAAZ' id='GP1404865880223AAAZ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/18</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>117,785</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABA' id='GP1404865880223AABA'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/19</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>92,771</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABB' id='GP1404865880223AABB'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/20</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>81,281</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABC' id='GP1404865880223AABC'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/21</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>38,302</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABD' id='GP1404865880223AABD'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/22</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>24,900</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABE' id='GP1404865880223AABE'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/23</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>29,796</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABF' id='GP1404865880223AABF'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/24</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>17,993</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABG' id='GP1404865880223AABG'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/25</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>13,542</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABH' id='GP1404865880223AABH'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/26</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>21,954</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABI' id='GP1404865880223AABI'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/27</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>29,100</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABJ' id='GP1404865880223AABJ'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/28</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>28,039</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABK' id='GP1404865880223AABK'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/29</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>28,766</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABL' id='GP1404865880223AABL'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/30</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>23,908</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABM' id='GP1404865880223AABM'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/31</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>18,140</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABN' id='GP1404865880223AABN'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>08/01</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>22,992</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABO' id='GP1404865880223AABO'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>08/02</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>16,922</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABP' id='GP1404865880223AABP'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>08/03</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>11,583</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABQ' id='GP1404865880223AABQ'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>08/04</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>8,437</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABR' id='GP1404865880223AABR'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>08/05</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>9,392</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABS' id='GP1404865880223AABS'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>08/06</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>7,368</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880223AABT' id='GP1404865880223AABT'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>08/07</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>7,337</td></tr></table>
+<MAP name='Images_4299545330178975_JPG_map'>
+<AREA shape='rect' coords='0,0,1,1'/>
+<AREA shape="rect" coords="308,117,312,121" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABT",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABT",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABT",event)'/>
+<AREA shape="rect" coords="301,117,305,121" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABS",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABS",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABS",event)'/>
+<AREA shape="rect" coords="294,116,298,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABR",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABR",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABR",event)'/>
+<AREA shape="rect" coords="287,117,291,121" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABQ",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABQ",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABQ",event)'/>
+<AREA shape="rect" coords="280,115,284,119" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABP",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABP",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABP",event)'/>
+<AREA shape="rect" coords="273,113,277,117" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABO",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABO",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABO",event)'/>
+<AREA shape="rect" coords="266,110,270,114" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABN",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABN",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABN",event)'/>
+<AREA shape="rect" coords="259,112,263,116" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABM",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABM",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABM",event)'/>
+<AREA shape="rect" coords="252,110,256,114" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABL",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABL",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABL",event)'/>
+<AREA shape="rect" coords="245,108,249,112" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABK",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABK",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABK",event)'/>
+<AREA shape="rect" coords="238,108,242,112" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABJ",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABJ",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABJ",event)'/>
+<AREA shape="rect" coords="231,108,235,112" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABI",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABI",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABI",event)'/>
+<AREA shape="rect" coords="225,111,229,115" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABH",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABH",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABH",event)'/>
+<AREA shape="rect" coords="218,114,222,118" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABG",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABG",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABG",event)'/>
+<AREA shape="rect" coords="211,112,215,116" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABF",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABF",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABF",event)'/>
+<AREA shape="rect" coords="204,107,208,111" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABE",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABE",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABE",event)'/>
+<AREA shape="rect" coords="197,109,201,113" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABD",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABD",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABD",event)'/>
+<AREA shape="rect" coords="190,103,194,107" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABC",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABC",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABC",event)'/>
+<AREA shape="rect" coords="183,84,187,88" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABB",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABB",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABB",event)'/>
+<AREA shape="rect" coords="176,79,180,83" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABA",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AABA",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AABA",event)'/>
+<AREA shape="rect" coords="169,68,173,72" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAZ",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAZ",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAZ",event)'/>
+<AREA shape="rect" coords="162,25,166,29" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAY",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAY",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAY",event)'/>
+<AREA shape="rect" coords="155,11,159,15" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAX",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAX",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAX",event)'/>
+<AREA shape="rect" coords="148,79,152,83" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAW",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAW",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAW",event)'/>
+<AREA shape="rect" coords="141,110,145,114" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAV",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAV",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAV",event)'/>
+<AREA shape="rect" coords="135,116,139,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAU",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAU",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAU",event)'/>
+<AREA shape="rect" coords="128,116,132,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAT",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAT",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAT",event)'/>
+<AREA shape="rect" coords="121,105,125,109" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAS",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAS",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAS",event)'/>
+<AREA shape="rect" coords="114,112,118,116" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAR",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAR",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAR",event)'/>
+<AREA shape="rect" coords="107,117,111,121" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAQ",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAQ",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAQ",event)'/>
+<AREA shape="rect" coords="100,119,104,123" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAP",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAP",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAP",event)'/>
+<AREA shape="rect" coords="93,119,97,123" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAO",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAO",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAO",event)'/>
+<AREA shape="rect" coords="86,118,90,122" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAN",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAN",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAN",event)'/>
+<AREA shape="rect" coords="79,115,83,119" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAM",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAM",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAM",event)'/>
+<AREA shape="rect" coords="72,116,76,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAL",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAL",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAL",event)'/>
+<AREA shape="rect" coords="65,119,69,123" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAK",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAK",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAK",event)'/>
+<AREA shape="rect" coords="58,119,62,123" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAJ",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAJ",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAJ",event)'/>
+<AREA shape="rect" coords="52,117,56,121" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAI",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAI",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAI",event)'/>
+<AREA shape="rect" coords="93,108,97,112" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAH",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAH",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAH",event)'/>
+<AREA shape="rect" coords="86,107,90,111" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAG",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAG",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAG",event)'/>
+<AREA shape="rect" coords="79,115,83,119" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAF",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAF",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAF",event)'/>
+<AREA shape="rect" coords="72,116,76,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAE",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAE",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAE",event)'/>
+<AREA shape="rect" coords="65,116,69,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAD",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAD",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAD",event)'/>
+<AREA shape="rect" coords="58,116,62,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAC",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAC",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAC",event)'/>
+<AREA shape="rect" coords="52,116,56,120" onMouseover='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAB",event,true)' onMouseout='xx_set_visible("Images_4299545330178975_JPG","GP1404865880223AAAB",event,false)' onMousemove='xx_move_tag("Images_4299545330178975_JPG","GP1404865880223AAAB",event)'/>
+</MAP>
+
+<script language="javascript" src="/cfanc/CFIDE/GraphData.cfm?graphCache=wc50&graphID=script.js"></script>
+
+      </div>
+      </TD>
+
+
+      
+        
+      
+      
+
+      <TD ALIGN="center">
+        <B>Cumulative</B><BR>
+      <div id="graph">
+        <!-- WebCharts3D v5.1(2077b) -->
+<IMG SRC="/cfanc/CFIDE/GraphData.cfm?graphCache=wc50&graphID=Images/2921552970178976.JPG" id="Images_2921552970178976_JPG" name="Images_2921552970178976_JPG" usemap="#Images_2921552970178976_JPG_map" border="0"/>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAB' id='GP1404865880286AAAB'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/01</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>10,392</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAC' id='GP1404865880286AAAC'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/02</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>19,632</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAD' id='GP1404865880286AAAD'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/03</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>30,426</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAE' id='GP1404865880286AAAE'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/04</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>39,714</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAF' id='GP1404865880286AAAF'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/05</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>51,288</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAG' id='GP1404865880286AAAG'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/06</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>80,778</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAH' id='GP1404865880286AAAH'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/07</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAI' id='GP1404865880286AAAI'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/08</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAJ' id='GP1404865880286AAAJ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/09</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAK' id='GP1404865880286AAAK'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/10</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAL' id='GP1404865880286AAAL'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/11</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAM' id='GP1404865880286AAAM'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/12</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAN' id='GP1404865880286AAAN'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/13</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAO' id='GP1404865880286AAAO'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/14</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAP' id='GP1404865880286AAAP'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/15</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAQ' id='GP1404865880286AAAQ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/16</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAR' id='GP1404865880286AAAR'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/17</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAS' id='GP1404865880286AAAS'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/18</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAT' id='GP1404865880286AAAT'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/19</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAU' id='GP1404865880286AAAU'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/20</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAV' id='GP1404865880286AAAV'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/21</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAW' id='GP1404865880286AAAW'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/22</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAX' id='GP1404865880286AAAX'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/23</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAY' id='GP1404865880286AAAY'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/24</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AAAZ' id='GP1404865880286AAAZ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/25</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABA' id='GP1404865880286AABA'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/26</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABB' id='GP1404865880286AABB'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/27</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABC' id='GP1404865880286AABC'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/28</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABD' id='GP1404865880286AABD'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/29</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABE' id='GP1404865880286AABE'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/30</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABF' id='GP1404865880286AABF'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/31</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABG' id='GP1404865880286AABG'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/01</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABH' id='GP1404865880286AABH'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/02</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABI' id='GP1404865880286AABI'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/03</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABJ' id='GP1404865880286AABJ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/04</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABK' id='GP1404865880286AABK'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/05</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABL' id='GP1404865880286AABL'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/06</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABM' id='GP1404865880286AABM'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>08/07</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>109,854</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABN' id='GP1404865880286AABN'><tr><td width='8'>&nbsp;</td><td width='35'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>07/01</td></tr><tr><td width='8'>&nbsp;</td><td width='35'>7,530</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABO' id='GP1404865880286AABO'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/02</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>11,910</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABP' id='GP1404865880286AABP'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/03</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>16,074</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABQ' id='GP1404865880286AABQ'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/04</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>26,729</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABR' id='GP1404865880286AABR'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/05</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>38,183</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABS' id='GP1404865880286AABS'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/06</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>43,098</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABT' id='GP1404865880286AABT'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/07</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>46,606</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABU' id='GP1404865880286AABU'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/08</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>50,120</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABV' id='GP1404865880286AABV'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/09</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>56,934</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABW' id='GP1404865880286AABW'><tr><td width='8'>&nbsp;</td><td width='41'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>07/10</td></tr><tr><td width='8'>&nbsp;</td><td width='41'>75,204</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABX' id='GP1404865880286AABX'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/11</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>108,906</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABY' id='GP1404865880286AABY'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/12</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>118,992</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AABZ' id='GP1404865880286AABZ'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/13</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>128,082</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACA' id='GP1404865880286AACA'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/14</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>152,602</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACB' id='GP1404865880286AACB'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/15</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>245,753</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACC' id='GP1404865880286AACC'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/16</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>492,837</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACD' id='GP1404865880286AACD'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/17</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>708,473</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACE' id='GP1404865880286AACE'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/18</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>826,258</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACF' id='GP1404865880286AACF'><tr><td width='8'>&nbsp;</td><td width='47'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>07/19</td></tr><tr><td width='8'>&nbsp;</td><td width='47'>919,029</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACG' id='GP1404865880286AACG'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/20</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,000,310</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACH' id='GP1404865880286AACH'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/21</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,038,612</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACI' id='GP1404865880286AACI'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/22</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,063,512</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACJ' id='GP1404865880286AACJ'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/23</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,093,308</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACK' id='GP1404865880286AACK'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/24</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,111,301</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACL' id='GP1404865880286AACL'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/25</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,124,843</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACM' id='GP1404865880286AACM'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/26</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,146,797</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACN' id='GP1404865880286AACN'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/27</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,175,897</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACO' id='GP1404865880286AACO'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/28</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,203,936</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACP' id='GP1404865880286AACP'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/29</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,232,702</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACQ' id='GP1404865880286AACQ'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/30</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,256,610</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACR' id='GP1404865880286AACR'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>07/31</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,274,750</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACS' id='GP1404865880286AACS'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/01</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,297,742</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACT' id='GP1404865880286AACT'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/02</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,314,664</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACU' id='GP1404865880286AACU'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/03</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,326,247</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACV' id='GP1404865880286AACV'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/04</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,334,684</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACW' id='GP1404865880286AACW'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/05</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,344,076</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACX' id='GP1404865880286AACX'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/06</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,351,444</td></tr></table>
+<table cellpadding='0' cellspacing='1' style='visibility: hidden;display: none; position:absolute;font-family: Dialog;font-size: 11px;background:#FFFFFF;foreground:#333333;color:#333333;-moz-opacity:.78;-opacity:.78;filter:alpha(opacity=78);border:1px solid #333333;' name='GP1404865880286AACY' id='GP1404865880286AACY'><tr><td width='8'>&nbsp;</td><td width='56'>&nbsp;</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>08/07</td></tr><tr><td width='8'>&nbsp;</td><td width='56'>1,358,781</td></tr></table>
+<MAP name='Images_2921552970178976_JPG_map'>
+<AREA shape='rect' coords='0,0,1,1'/>
+<AREA shape="rect" coords="308,11,312,15" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACY",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACY",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACY",event)'/>
+<AREA shape="rect" coords="301,11,305,15" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACX",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACX",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACX",event)'/>
+<AREA shape="rect" coords="294,12,298,16" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACW",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACW",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACW",event)'/>
+<AREA shape="rect" coords="288,12,292,16" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACV",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACV",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACV",event)'/>
+<AREA shape="rect" coords="281,13,285,17" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACU",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACU",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACU",event)'/>
+<AREA shape="rect" coords="274,14,278,18" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACT",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACT",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACT",event)'/>
+<AREA shape="rect" coords="268,15,272,19" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACS",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACS",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACS",event)'/>
+<AREA shape="rect" coords="261,17,265,21" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACR",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACR",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACR",event)'/>
+<AREA shape="rect" coords="254,19,258,23" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACQ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACQ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACQ",event)'/>
+<AREA shape="rect" coords="248,21,252,25" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACP",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACP",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACP",event)'/>
+<AREA shape="rect" coords="241,23,245,27" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACO",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACO",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACO",event)'/>
+<AREA shape="rect" coords="234,25,238,29" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACN",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACN",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACN",event)'/>
+<AREA shape="rect" coords="228,28,232,32" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACM",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACM",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACM",event)'/>
+<AREA shape="rect" coords="221,29,225,33" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACL",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACL",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACL",event)'/>
+<AREA shape="rect" coords="214,31,218,35" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACK",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACK",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACK",event)'/>
+<AREA shape="rect" coords="208,32,212,36" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACJ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACJ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACJ",event)'/>
+<AREA shape="rect" coords="201,34,205,38" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACI",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACI",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACI",event)'/>
+<AREA shape="rect" coords="194,36,198,40" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACH",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACH",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACH",event)'/>
+<AREA shape="rect" coords="188,40,192,44" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACG",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACG",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACG",event)'/>
+<AREA shape="rect" coords="181,46,185,50" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACF",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACF",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACF",event)'/>
+<AREA shape="rect" coords="174,54,178,58" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACE",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACE",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACE",event)'/>
+<AREA shape="rect" coords="167,63,171,67" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACD",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACD",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACD",event)'/>
+<AREA shape="rect" coords="161,81,165,85" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACC",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACC",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACC",event)'/>
+<AREA shape="rect" coords="154,101,158,105" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACB",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACB",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACB",event)'/>
+<AREA shape="rect" coords="147,108,151,112" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACA",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AACA",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AACA",event)'/>
+<AREA shape="rect" coords="141,110,145,114" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABZ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABZ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABZ",event)'/>
+<AREA shape="rect" coords="134,111,138,115" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABY",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABY",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABY",event)'/>
+<AREA shape="rect" coords="127,112,131,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABX",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABX",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABX",event)'/>
+<AREA shape="rect" coords="121,114,125,118" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABW",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABW",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABW",event)'/>
+<AREA shape="rect" coords="114,116,118,120" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABV",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABV",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABV",event)'/>
+<AREA shape="rect" coords="107,116,111,120" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABU",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABU",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABU",event)'/>
+<AREA shape="rect" coords="101,117,105,121" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABT",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABT",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABT",event)'/>
+<AREA shape="rect" coords="94,117,98,121" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABS",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABS",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABS",event)'/>
+<AREA shape="rect" coords="87,117,91,121" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABR",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABR",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABR",event)'/>
+<AREA shape="rect" coords="81,118,85,122" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABQ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABQ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABQ",event)'/>
+<AREA shape="rect" coords="74,119,78,123" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABP",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABP",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABP",event)'/>
+<AREA shape="rect" coords="67,120,71,124" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABO",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABO",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABO",event)'/>
+<AREA shape="rect" coords="61,120,65,124" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABN",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABN",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABN",event)'/>
+<AREA shape="rect" coords="308,112,312,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABM",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABM",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABM",event)'/>
+<AREA shape="rect" coords="301,112,305,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABL",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABL",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABL",event)'/>
+<AREA shape="rect" coords="294,112,298,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABK",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABK",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABK",event)'/>
+<AREA shape="rect" coords="288,112,292,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABJ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABJ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABJ",event)'/>
+<AREA shape="rect" coords="281,112,285,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABI",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABI",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABI",event)'/>
+<AREA shape="rect" coords="274,112,278,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABH",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABH",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABH",event)'/>
+<AREA shape="rect" coords="268,112,272,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABG",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABG",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABG",event)'/>
+<AREA shape="rect" coords="261,112,265,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABF",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABF",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABF",event)'/>
+<AREA shape="rect" coords="254,112,258,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABE",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABE",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABE",event)'/>
+<AREA shape="rect" coords="248,112,252,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABD",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABD",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABD",event)'/>
+<AREA shape="rect" coords="241,112,245,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABC",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABC",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABC",event)'/>
+<AREA shape="rect" coords="234,112,238,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABB",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABB",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABB",event)'/>
+<AREA shape="rect" coords="228,112,232,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABA",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AABA",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AABA",event)'/>
+<AREA shape="rect" coords="221,112,225,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAZ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAZ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAZ",event)'/>
+<AREA shape="rect" coords="214,112,218,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAY",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAY",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAY",event)'/>
+<AREA shape="rect" coords="208,112,212,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAX",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAX",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAX",event)'/>
+<AREA shape="rect" coords="201,112,205,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAW",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAW",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAW",event)'/>
+<AREA shape="rect" coords="194,112,198,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAV",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAV",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAV",event)'/>
+<AREA shape="rect" coords="188,112,192,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAU",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAU",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAU",event)'/>
+<AREA shape="rect" coords="181,112,185,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAT",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAT",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAT",event)'/>
+<AREA shape="rect" coords="174,112,178,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAS",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAS",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAS",event)'/>
+<AREA shape="rect" coords="167,112,171,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAR",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAR",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAR",event)'/>
+<AREA shape="rect" coords="161,112,165,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAQ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAQ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAQ",event)'/>
+<AREA shape="rect" coords="154,112,158,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAP",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAP",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAP",event)'/>
+<AREA shape="rect" coords="147,112,151,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAO",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAO",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAO",event)'/>
+<AREA shape="rect" coords="141,112,145,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAN",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAN",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAN",event)'/>
+<AREA shape="rect" coords="134,112,138,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAM",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAM",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAM",event)'/>
+<AREA shape="rect" coords="127,112,131,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAL",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAL",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAL",event)'/>
+<AREA shape="rect" coords="121,112,125,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAK",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAK",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAK",event)'/>
+<AREA shape="rect" coords="114,112,118,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAJ",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAJ",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAJ",event)'/>
+<AREA shape="rect" coords="107,112,111,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAI",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAI",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAI",event)'/>
+<AREA shape="rect" coords="101,112,105,116" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAH",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAH",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAH",event)'/>
+<AREA shape="rect" coords="94,114,98,118" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAG",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAG",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAG",event)'/>
+<AREA shape="rect" coords="87,116,91,120" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAF",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAF",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAF",event)'/>
+<AREA shape="rect" coords="81,117,85,121" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAE",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAE",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAE",event)'/>
+<AREA shape="rect" coords="74,118,78,122" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAD",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAD",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAD",event)'/>
+<AREA shape="rect" coords="67,119,71,123" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAC",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAC",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAC",event)'/>
+<AREA shape="rect" coords="61,120,65,124" onMouseover='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAB",event,true)' onMouseout='xx_set_visible("Images_2921552970178976_JPG","GP1404865880286AAAB",event,false)' onMousemove='xx_move_tag("Images_2921552970178976_JPG","GP1404865880286AAAB",event)'/>
+</MAP>
+
+<script language="javascript" src="/cfanc/CFIDE/GraphData.cfm?graphCache=wc50&graphID=script.js"></script>
+
+      </div>
+      </TD>
+    </TR>
+  
+      <tr>
+        <td colspan="2"> 
+          <p><strong>Description</strong>: <p>The Kenai River late-run sockeye salmon sonar project is located approximately 19 miles upstream from the mouth of the Kenai River. The estimated travel time for sockeye salmon to reach this site once they have entered the Kenai River can be quite variable, ranging from approximately 24 hours to 72 hours.</p>
+
+<p>Beginning in 2011, ADF&G will be counting escapement at Kenai River mile 19 using DIDSON rather than the old Bendix sonar.   Due to the change in sonar technology, the sustainable escapement goal for Kenai River late-run sockeye salmon was changed to 700,000 – 1,200,000 fish counted using DIDSON sonar.   To provide for comparison of counts among years, all historical escapement counts in this database have been converted from Bendix to DIDSON-equivalent units.   Due to these changes, historical escapement counts are about 1.4 times higher than those previously reported.</p>
+
+<p>Telephone counts are available at 907 262-9097.</p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Contact</strong>: 
+            
+              <a href="mailto:pat.shields@alaska.gov">Northern Cook Inlet Comm Fish Research Biologist</a>,<br>(907) 262-9368
+            
+          </p>
+        
+        
+          <td>
+            <p><a href="/sf/FishingReports/index.cfm?adfg=R2.reportDetail&Region=2&area_key=5
+">Weekly Sportfish Fishing Report for this area</a></p>
+          </td>
+        
+      </tr>
+  
+</TABLE>
+
+
+
+
+
+
+
+
+
+
+  
+    <p style="text-align: center;">38 records returned for the years selected. Dashes indicate days with no count.<br />
+    <A HREF="/sf/FishCounts/index.cfm?ADFG=export.excel&countLocationID=40&year=2014,2013&speciesID=420">[Export results in Excel format]</A></p>
+  
+  
+  <TABLE class="basic" width="100%">
+    <col class="Date" />
+    <col class="Count" />
+    <col class="Y1" />
+    
+      <col class="Y2" />
+    
+    
+    
+    <TR>
+      <TH>Date <br>2014</TH>
+      <TH>Count <br>2014</TH>
+      <TH>Cumulative <br>2014</TH>
+    
+      <TH>Cumulative <br>2013</TH>
+    
+    
+    
+      <TH>Notes for<br>2014</TH>
+    </TR>
+      
+  
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Aug-07
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,358,781
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Aug-06
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,351,444
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Aug-05
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,344,076
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Aug-04
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,334,684
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Aug-03
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,326,247
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Aug-02
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,314,664
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Aug-01
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,297,742
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-31
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,274,750
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-30
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,256,610
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-29
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,232,702
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-28
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,203,936
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-27
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,175,897
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-26
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,146,797
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-25
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,124,843
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-24
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,111,301
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-23
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,093,308
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-22
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,063,512
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-21
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+            1,038,612
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-20
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+            1,000,310
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-19
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+             919,029
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-18
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+             826,258
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-17
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+             708,473
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-16
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+             492,837
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-15
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+             245,753
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-14
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+             152,602
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-13
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+             128,082
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-12
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+             118,992
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-11
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+             108,906
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-10
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+              75,204
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-09
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+              56,934
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-08
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+          -
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+              50,120
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-07
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+           29,076
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+             109,854
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+              46,606
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-06
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+           29,490
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+              80,778
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+              43,098
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-05
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+           11,574
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+              51,288
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+              38,183
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-04
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+            9,288
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+              39,714
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+              26,729
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-03
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+           10,794
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+              30,426
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+              16,074
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD class="alt">
+         Jul-02
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+            9,240
+        
+      </TD>
+      <TD ALIGN="RIGHT" class="alt">
+        
+              19,632
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" class="colY2">
+        
+              11,910
+        
+      </TD>
+    
+
+    
+
+    
+      <TD class="alt">
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+
+
+
+    
+    <TR>
+      <TD >
+         Jul-01
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+           10,392
+        
+      </TD>
+      <TD ALIGN="RIGHT" >
+        
+              10,392
+        
+      </TD>
+
+    
+      <TD ALIGN="RIGHT" >
+        
+               7,530
+        
+      </TD>
+    
+
+    
+
+    
+      <TD >
+        
+          &nbsp;
+        
+      </TD>
+    </TR>
+    
+    
+    
+  </TABLE>
+
+
+        
+      </div>
+    </div>
+  </div><!-- end  contentholder div -->
+  <div style="clear: both;"></div>
+</div><!-- End dsp_content_open.cfm -->
+
+
+<!-- Begin dsp_footer_adfg.cfm -->
+<div id="footer-top"></div>
+<div id="footer_adfg">
+
+	<div class="footer_adfg_contact_info">
+		<span class="footer_contact_title">Alaska Department of Fish and Game<br></span>
+		
+		 <div class="footer_contact_details" style="width: 10.9em;">
+			P.O. Box 115526<br>
+			1255 W. 8th Street<br>
+			Juneau, AK 99811-5526 
+		</div> 
+		
+		 <div class="footer_contact_details" style="width: 10em;">
+			 <a href="/index.cfm?ADFG=contacts.emailus">E-mail Us</a> /<br>
+			 <a href="/index.cfm?ADFG=contacts.main">Office Locations</a>
+		
+		
+		</div>
+		
+	</div>
+	
+	<div id="footerlinks">
+		<ul>
+		    <li><a href="/index.cfm?ADFG=">Fish &amp; Game Home</a>:</li> 
+		    <li><a href="/index.cfm?ADFG=about.main">About Us</a></li>
+		    <li><a href="/index.cfm?ADFG=join.main">Join Us</a></li>
+		    <li><a href="/index.cfm?ADFG=news.main">News</a></li>
+		    <li><a href="/index.cfm?ADFG=library.main">Library</a></li>
+		    <li><a href="/index.cfm?ADFG=license.main">Licenses/Permits</a></li>
+		    <li><a href="/index.cfm?ADFG=contacts.main">Contact Us</a></li>
+		</ul>
+		
+		<ul> 
+		    <li><a href="/index.cfm?ADFG=home.accessibility">Accessibility</a></li>   
+		    <li><a href="/index.cfm?ADFG=home.oeostatement">OEO Statement</a></li>
+		    <li><a href="/index.cfm?ADFG=home.terms">Terms of Use</a></li>
+		    <li><a href="/index.cfm?ADFG=home.privacy">Privacy</a></li>
+		    <li><a href="/index.cfm?ADFG=home.copyright">Copyright Info</a></li>
+		    <li><a href="mailto:dfg.webmaster@alaska.gov">Webmaster</a></li>
+		</ul>
+		
+		<ul>
+			<li>Copyright 2014 Alaska Department of Fish and Game</li>
+		</ul>
+	</div><!-- end footerlinks -->
+		
+	<div style="clear: both;"></div>
+	
+</div><!-- End dsp_footer_adfg.cfm -->
+
+<!-- Empty dsp_page_end.cfm -->
+    </div><!-- End maincontainer div in default_layout.cfm -->
+  </div>
+ <!-- Begin dsp_footer_soa.cfm -->
+<div id="footer_soa">
+  <div id="footer_soacontent">
+    <div class="footersoaleft">
+      <ul>
+        <li><a href="http://alaska.gov">State of Alaska</a></li>
+        <li><a href="https://my.alaska.gov/">myAlaska</a></li>
+        <li><a href="http://alaska.gov/akdir1.html">My Government</a></li>
+        <li><a href="http://alaska.gov/residentHome.html">Resident</a></li>
+        <li><a href="http://alaska.gov/businessHome.html">Business in Alaska</a></li>
+        <li><a href="http://alaska.gov/visitorHome.html">Visiting Alaska</a></li>
+        <li><a href="http://alaska.gov/employeeHome.html">State Employees</a></li>
+      </ul>
+    </div>
+    <div class="footersoaright">
+      <span class="footersoaleft_item">State of Alaska</span> <span class="footersoacenter_item">&copy; 2014</span> <span class="footersoaright_item"><a href="mailto:dfg.webmaster@alaska.gov">Webmaster</a></span>
+    </div>
+    <img id="footer_soadecoration" width="960" height="45" src="/static/_global/css/css_images/footer/footerbg_bottom.png" alt="">
+  </div>
+</div><!-- End dsp_footer_soa.cfm -->
+
+</body>
+</html><!-- End default_layout.cfm --> 
