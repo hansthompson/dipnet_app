@@ -12,6 +12,8 @@ testFish$Fishery <- factor(testFish$Fishery)
 theDay  <- ymd(str_split_fixed(testFish$Date, " " ,2 )[,1])
 theTime <- hms(str_split_fixed(testFish$Date, " " ,2 )[,2])
 testFish$Date <- theDay + theTime
+testFish$Date <- force_tz(testFish$Date, "America/Anchorage")
+
 #Combine fishery and station ID
 testFish$allIDs <- paste(testFish$Fishery, testFish$StationID)
 ## save
@@ -34,6 +36,7 @@ ggplot(data = testFish, aes(x = Date, y = StationCount, color = allIDs, fill = a
            label="*", size = 8)
 
 #show grid of comments on test fish
-grid.table(d = testFish[testFish$Comment != "", c(2, 9)],
+ grid.table(d = unique(testFish[testFish$Comment != "", c(2, 9)]),
            show.rownames = FALSE)
 
+mdy(theDay)
