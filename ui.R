@@ -19,13 +19,22 @@ shinyUI(fluidPage(
   wellPanel(   
     img(src = "codeforanc.png"),
     helpText("")
-    )
+    ),
+  wellPanel(
+      helpText(HTML("<b>VERSION CONTROL</b>")),
+      HTML('Version 0.8.0'),
+      HTML('<br>'),
+      HTML('Deployed on June 3rd, 2014'),
+      HTML('<br>'),
+      HTML('<a href="https://github.com/hansthompson/dipnet_app" target="_blank">Code on GitHub</a>')
+    ) 
+
   ),
-  
   
   mainPanel(
     
     tabsetPanel(
+      tabPanel("Introduction", includeMarkdown("docs/introduction.md")),
       tabPanel("2014 Real Time", 
                plotOutput("realtime"),
                plotOutput("tides"),
