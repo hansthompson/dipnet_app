@@ -3,23 +3,18 @@ library(plyr)
 library(shiny)
 library(lubridate)
 library(stringr)
-library(jpeg)
-
-#input <- list() 
-#input$start_year <- 1979
-#input$end_year <- 2012
-#input$start_date <- "06-30"
-#input$end_date <- "08-05"
-
 
 shinyServer(function(input, output) {  
-  ########LOAD DATA########
-  load("kenai_data.rda")
-  #########################
-  ########GET REALTIME#####
-  load("C:\\Users\\Hans T\\Desktop\\dipnet_app_revamp\\rt_dat.rda")
-  #########################
   
+  #Set base directory to load data from 
+  myDirectory <- "C:\\Users\\Hans T\\Documents\\GitHub\\dipnet_app\\data"
+  ########LOAD SONAR#######
+  load(paste(myDirectory, "kenai_data.rda", sep = "/"))
+  ########GET REALTIME#####
+  load(paste(myDirectory, "rt_dat.rda" , sep = "/"))
+  ########TEST FISH########
+  load(paste(myDirectory, "testFish.rda", sep = "/"))
+
   ########PROCESSING#######
   tides_reactive <- reactive({  
     days_in_the_future <- 1
@@ -45,7 +40,7 @@ shinyServer(function(input, output) {
   })
   
   realtime_reactive <- reactive({
-    return(rt_dat)
+    return(rt_dat2)
     #realtime_reactive <- rt_dat
   })
   ########################  
@@ -87,7 +82,22 @@ shinyServer(function(input, output) {
       ylab("River Depth in Feet")
     return(p)
   })
-  #########################
+
+  testFishReactive <- reactive({
+    p <- ggplot(data = testFish, aes(x = Date, y = StationCount, color = allIDs, fill = allIDs)) +
+           geom_bar(stat = "identity") +
+           ggtitle("Total Test Fish Caught in Cook Inlet") +
+           ylab("Total Fish") +
+           annotate("text",
+                    x=unique(testFish$Date[testFish$Comment != ""]),
+                    y=1,
+                    label="*", size = 8) + 
+           theme(legend.title=element_blank())
+  
+    return(p) 
+  })
+
+    #########################
 
   ######Publishing#########
 
@@ -100,6 +110,16 @@ shinyServer(function(input, output) {
     print(tide_chart())
   })
 
+  output$testFishery <- renderPlot({
+    print(testFishReactive())
+  })
+
+  output$testFisheryComments <- renderPlot({
+  	##WEAKLY CODED RIGHT HERE FOLKS
+    grid.table(d = unique(testFish[testFish$Comment != "", c(2, 9)]),
+               show.rownames = FALSE)
+  })
+  
   ###TABSET: PRIOR DATA####
   output$linechart <- renderPlot({
     print(prior_linechart())

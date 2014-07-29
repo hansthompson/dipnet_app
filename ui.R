@@ -18,7 +18,7 @@ shinyUI(fluidPage(
   ),
   wellPanel(   
     img(src = "codeforanc.png"),
-    helpText("test")
+    helpText("")
     )
   ),
   
@@ -26,9 +26,11 @@ shinyUI(fluidPage(
   mainPanel(
     
     tabsetPanel(
-      tabPanel("Real Time", 
+      tabPanel("2014 Real Time", 
                plotOutput("realtime"),
-               plotOutput("tides")
+               plotOutput("tides"),
+               plotOutput("testFishery"),
+               plotOutput("testFisheryComments")
       ), 
       tabPanel("Prior Sonar Counts", 
                plotOutput("linechart"),
