@@ -1,7 +1,7 @@
 dipnet_app
 ==========
 
-This project is from the Spring 2014 hAKathon. 
+This project is from the Spring 2014 hAKathon. It's live from the most recent year at http://codeforanchorage.shinyapps.io/dipnet_app/
 
 The goal of this project is to create a mobile and web application for modeling and tracking the real time returns of sockeye to the Kenai river to find the best times to go dipnetting.
 
