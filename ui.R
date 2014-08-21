@@ -42,8 +42,9 @@ shinyUI(fluidPage(
                plotOutput("testFisheryComments")
       ), 
       tabPanel("Prior Sonar Counts", 
-               plotOutput("linechart"),
-               plotOutput("barchart")
+               plotOutput("barchart"),
+               plotOutput("linechart")
+
                
       ) 
     )

@@ -3,6 +3,7 @@ library(plyr)
 library(shiny)
 library(lubridate)
 library(stringr)
+library(gridExtra)
 
 shinyServer(function(input, output) {  
   
@@ -63,13 +64,13 @@ shinyServer(function(input, output) {
     p <- ggplot(data = realtime_reactive(), aes(x = Date, y = cfue_estimates)) +   
       ylim(c(0, ylimit) * 1.1) +
       #xlim(c(real_tim$date[1], future)) 
-      geom_point(aes(color = "red"), size = 5) +   
-      stat_smooth(  method = "lm", 
-                    formula = y ~ poly(x, 4), 
-                    level = 0.95,
-                    fullrange = FALSE,
-                    se = TRUE,
-                    aes(colour = "black")) +
+      geom_line(aes(color = "red"), size = 3) +   
+      #stat_smooth(  method = "lm", 
+      #              formula = y ~ poly(x, 4), 
+      #              level = 0.95,
+      #              fullrange = FALSE,
+      #              se = TRUE,
+      #              aes(colour = "black")) +
       theme(legend.position="none") +
       ggtitle("Predicted Catch Per Effort") +
       ylab("Predicted Sockeye Catch Per Day") 
